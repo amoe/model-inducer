@@ -16,3 +16,18 @@ numbers.
 6.  When values repeat the tool should suggest cases where a domain table can
 be extracted.
 7.  The tool should produce DML scripts for population of said domain tables.
+
+
+## Current state
+
+It enables you to answer the question: is this column denormalized with respect
+to that column?
+
+Syntax:
+
+
+    model-inducer EXCEL-FILE GROUPING-COLUMN QUERY-COLUMN
+
+Grouping column is the column you want to group by; query column is the column
+you want to detect duplication in.  The tool will report duplication within
+query-column.
